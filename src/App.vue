@@ -1,28 +1,25 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <component v-bind:is="layout">
+      <router-view />
+    </component>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import DefaultLayout from './layouts/default';
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  name: 'app',
+
+  data() {
+    return {
+      layout: DefaultLayout
+    };
   }
-}
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style land="sass" scoped>
+@import './assets/style/app.scss';
 </style>
