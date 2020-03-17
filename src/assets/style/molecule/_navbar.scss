@@ -1,0 +1,18 @@
+.nav {
+  display: flex;
+  height: 60px;
+  align-items: center;
+
+  a {
+    font-size: 16px;
+    color: #000020;
+    margin-left: 15px;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+    &:first-child {
+      margin: 0;
+    }
+  }
+}

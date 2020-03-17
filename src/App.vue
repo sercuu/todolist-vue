@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <component v-bind:is="layout">
+    <component :is="layout">
       <router-view />
     </component>
   </div>
 </template>
 
 <script>
-import DefaultLayout from './layouts/default';
+import DefaultLayout from "./layouts/default";
 
 export default {
-  name: 'app',
+  name: "app",
 
   data() {
     return {
@@ -21,5 +21,5 @@ export default {
 </script>
 
 <style land="sass" scoped>
-@import './assets/style/app.scss';
+@import "./assets/style/app.scss";
 </style>

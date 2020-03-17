@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <Navbar />
+    <Header />
 
     <slot />
 
@@ -9,16 +9,14 @@
 </template>
 
 <script>
-import Navbar from '../../components/navBar';
-import Footer from '../../components/footer';
+import Header from "../../components/header";
+import Footer from "../../components/footer";
 
 export default {
-  name: 'defaultLayout',
+  name: "defaultLayout",
   components: {
-    Navbar,
+    Header,
     Footer
   }
 };
 </script>
-
-<style></style>
