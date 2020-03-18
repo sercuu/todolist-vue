@@ -14,13 +14,11 @@
 </template>
 
 <script>
-import Navbar from "../navBar";
+import Navbar from '../navBar';
 export default {
-  nama: "header",
+  nama: 'header',
   components: {
     Navbar
   }
 };
 </script>
-
-<style></style>

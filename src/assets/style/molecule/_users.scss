@@ -1,0 +1,23 @@
+.users {
+  &__list {
+    box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.05) !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-radius: 6px;
+    padding: 25px;
+    margin-bottom: 25px;
+
+    &__image {
+      img {
+        border-radius: 100%;
+      }
+    }
+    &__content {
+      p {
+        margin: 0;
+      }
+    }
+  }
+}

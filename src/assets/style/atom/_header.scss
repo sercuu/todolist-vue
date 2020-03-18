@@ -1,4 +1,12 @@
 .header {
+  padding: 15px 0;
+  background: linear-gradient(
+    122deg,
+    rgba(70, 66, 251, 1) 0%,
+    rgba(66, 130, 251, 1) 50%,
+    rgba(66, 174, 251, 1) 100%
+  );
+
   img {
     height: 60px;
   }

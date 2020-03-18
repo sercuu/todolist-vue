@@ -1,8 +1,9 @@
 <template>
   <div class="main">
     <Header />
-
+    <!-- Children component -->
     <slot />
+    <!-- Children component -->
 
     <Footer />
   </div>

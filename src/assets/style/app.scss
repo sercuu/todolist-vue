@@ -2,12 +2,18 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 /* Plugins */
 
+/* Organism */
+
+/* Organism */
+
 /* Molecule */
 @import '/molecule/navbar';
+@import '/molecule/users';
 /* Molecule */
 
 /* Atom */
 @import '/atom/header';
+@import '/atom/footer';
 /* Atom */
 
 /* Base */
