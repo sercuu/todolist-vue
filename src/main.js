@@ -1,11 +1,20 @@
 import Vue from 'vue'
+import Router from 'vue-router'
+import Vuex from 'vuex'
 import App from './App.vue'
-import Router from './router'
+
+import routerModel from './routerModel'
+import Store from './vuex/store'
 import './assets/style/app.scss'
 
-Vue.config.productionTip = false
+Vue.use(Router);
+Vue.use(Vuex)
+
+const router = new Router(routerModel)
+const store = new Vuex.Store(Store)
 
 new Vue({
-  router:Router,
+  router,
+  store,
   render: h => h(App),
 }).$mount('#app')
