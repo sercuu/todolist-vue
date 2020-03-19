@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import todolist from './modules/todolist';
-import users from './modules/user'
+import todo from './modules/todo';
+import users from './modules/users'
 
 // Load vuec
 Vue.use(Vuex);
@@ -9,7 +9,7 @@ Vue.use(Vuex);
 //Create Store 
 export default new Vuex.Store({
   modules: {
-    todolist,
+    todo,
     users
   }
 });
