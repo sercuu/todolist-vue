@@ -1,9 +1,11 @@
 const state = {
     todolist: {
-        
+        title:'ss'
     }
 }
-const getters = {}
+const getters = {
+    todolist: (state) => state.todolist
+}
 const mutations = {}
 const aciotns = {}
 

@@ -1,7 +1,7 @@
-import Home from './views/home'
-import About from './views/about'
-import Users from './views/users'
-import Todo from './views/todolist'
+import Home from './views/Home'
+import About from './views/About'
+import Users from './views/Users'
+import Todo from './views/Todo'
 
 const routeModel = {
      routes :[
@@ -21,8 +21,8 @@ const routeModel = {
             component: Users
         },
          {
-            path: '/todolist',
-            name: 'Todolist',
+            path: '/todo',
+            name: 'Todo',
             component: Todo
         }
     ],

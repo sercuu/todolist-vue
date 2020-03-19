@@ -1,0 +1,59 @@
+.todo {
+  .addTodo {
+    form {
+      width: 100%;
+      display: flex;
+    }
+
+    &__input {
+      flex: 10;
+      margin-right: 15px;
+
+      input {
+        width: 100%;
+        border: 1px solid #42aefb;
+        padding: 7px 10px;
+
+        border-radius: 25px;
+
+        &:focus,
+        &:hover {
+          outline: none;
+        }
+      }
+    }
+
+    &__button {
+      flex: 2;
+
+      button {
+        width: 100%;
+        padding: 7px 0;
+        color: #fff;
+        border-radius: 25px;
+        border: none;
+        background: linear-gradient(
+          122deg,
+          #4642fb 0%,
+          #4282fb 50%,
+          #42aefb 100%
+        );
+
+        &:focus,
+        &:hover {
+          outline: none;
+        }
+      }
+    }
+  }
+  .list {
+    box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.05) !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-radius: 6px;
+    padding: 25px;
+    margin-bottom: 25px;
+  }
+}
