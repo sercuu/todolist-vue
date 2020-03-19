@@ -1,22 +1,22 @@
 import axios from 'axios'
 
 const state = {
-    userlist: {}
+    users: {}
 }
 const getters = {
-    alluserlist : (state) => state.userlist 
+    userlist : (state) => state.users 
 }
 
 const actions = {
     async fetchUserList( { commit }) {
         const { data } = await axios.get('https://reqres.in/api/users?page=1');
-        console.log(data, 'data')
+
         commit('setUserList', data)
     },
 }
 
 const mutations = {
-    setUserList : (state, fetchUsers) => (state.userlist = fetchUsers)
+    setUserList : (state, fetchUsers) => (state.users = fetchUsers)
 }
 
 

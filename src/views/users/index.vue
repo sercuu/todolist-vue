@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 mb-4"><h1>User List</h1></div>
-        <div class="col-4" v-for="user in users.userlist.data" :key="user.id">
+        <div class="col-4" v-for="user in userlist.data" :key="user.id">
           <div class="users__list">
             <div class="users__list__image">
               <img v-bind:src="user.avatar" v-bind:alt="user.avatar" />
@@ -25,7 +25,7 @@ import { mapGetters, mapActions } from 'vuex';
 export default {
   name: 'Users',
   computed: {
-    ...mapGetters(['alluserlist'])
+    ...mapGetters(['userlist'])
   },
   methods: {
     ...mapActions(['fetchUserList'])
