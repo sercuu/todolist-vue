@@ -1,6 +1,6 @@
 const state = {
     todolist: {
-        title: 'amk todoo'
+        
     }
 }
 const getters = {}
