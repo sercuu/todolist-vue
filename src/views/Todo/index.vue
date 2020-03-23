@@ -6,7 +6,7 @@
           <h1>To Do</h1>
           <AddTodo :handileSubmit="handileSubmit" />
           <TodoList :Lists="todolist" :handleDelete="handleDelete" />
-          <div class="empty" v-if="todolist.length === 0">YAPILCAK IS YOK</div>
+          <div class="empty" v-if="todolist.length === 0">YAPILCAK IS YOK &#127829;</div>
         </div>
       </div>
     </div>
