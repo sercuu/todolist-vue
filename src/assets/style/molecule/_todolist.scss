@@ -24,9 +24,12 @@
     }
 
     &__button {
+      position: relative;
       flex: 2;
 
       button {
+        position: absolute;
+        bottom: 0;
         width: 100%;
         padding: 7px 0;
         color: #fff;
