@@ -1,8 +1,17 @@
 <template>
   <div class="addTodo">
-    <form>
+    <form @submit="onSubmit">
       <div class="addTodo__input">
-        <input type="text" name="addtodo" autocomplete="off" />
+        <label>Title</label>
+        <input type="text" name="addtodo" v-model="todoVal" autocomplete="off" />
+      </div>
+      <div>
+        <label>Start Date</label>
+        <Datepicker :value="startDate" v-model="startDate" name="startDate" />
+      </div>
+      <div>
+        <label>End Date</label>
+        <Datepicker :value="endDate" name="endDate" v-model="endDate" />
       </div>
 
       <div class="addTodo__button">
@@ -13,9 +22,32 @@
 </template>
 
 <script>
-// import { mapGetters } from 'vuex';
+import Datepicker from "vuejs-datepicker";
+import uid from "uid";
+
 export default {
-  name: 'addTodo'
+  name: "addTodo",
+  props: ["handileSubmit"],
+  components: { Datepicker },
+  data() {
+    return {
+      todoVal: "",
+      startDate: new Date(),
+      endDate: new Date()
+    };
+  },
+  methods: {
+    onSubmit(e) {
+      e.preventDefault();
+      const todo = {
+        id: uid(),
+        title: this.todoVal,
+        startDate: this.startDate,
+        endDate: this.endDate
+      };
+      this.handileSubmit(todo);
+    }
+  }
 };
 </script>
 

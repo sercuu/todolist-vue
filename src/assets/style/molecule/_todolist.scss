@@ -45,15 +45,35 @@
         }
       }
     }
+
+    .vdp-datepicker {
+      margin: 0 5px;
+
+      input {
+        width: 100%;
+        border: 1px solid #42aefb;
+        padding: 7px 10px;
+
+        border-radius: 25px;
+        &:focus,
+        &:hover {
+          outline: none;
+        }
+      }
+    }
   }
   .list {
-    box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.05) !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    border-radius: 6px;
-    padding: 25px;
-    margin-bottom: 25px;
+    margin: 40px 0;
+
+    &__item {
+      box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.05) !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      border-radius: 6px;
+      padding: 25px;
+      margin-bottom: 25px;
+    }
   }
 }

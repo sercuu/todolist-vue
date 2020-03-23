@@ -4,8 +4,8 @@
       <div class="row">
         <div class="col-12">
           <h1>To Do</h1>
-          <AddTodo />
-          <TodoList :list="list" />
+          <AddTodo :handileSubmit="handileSubmit" />
+          <TodoList :Lists="todolist" />
         </div>
       </div>
     </div>
@@ -13,29 +13,24 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-import AddTodo from '../../components/todo/add';
-import TodoList from '../../components/todo/list';
+import { mapGetters, mapActions } from "vuex";
+import AddTodo from "../../components/todo/add";
+import TodoList from "../../components/todo/list";
 
 export default {
-  name: 'todolist',
+  name: "todolist",
   components: { AddTodo, TodoList },
-  data: function() {
-    return {
-      list: [
-        {
-          title: 'title',
-          desc: 'desc'
-        },
-        {
-          title: 'title1',
-          desc: 'desc'
-        }
-      ]
-    };
+  methods: {
+    ...mapActions(["handleAddTodo", "getLocalStroge"]),
+    handileSubmit(val) {
+      this.handleAddTodo(val);
+    }
   },
   computed: {
-    ...mapGetters(['todolist'])
+    ...mapGetters(["todolist"])
+  },
+  created() {
+    this.getLocalStroge();
   }
 };
 </script>
