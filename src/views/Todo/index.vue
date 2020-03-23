@@ -5,7 +5,8 @@
         <div class="col-12">
           <h1>To Do</h1>
           <AddTodo :handileSubmit="handileSubmit" />
-          <TodoList :Lists="todolist" />
+          <TodoList :Lists="todolist" :handleDelete="handleDelete" />
+          <div class="empty" v-if="todolist.length === 0">YAPILCAK IS YOK</div>
         </div>
       </div>
     </div>
@@ -21,9 +22,12 @@ export default {
   name: "todolist",
   components: { AddTodo, TodoList },
   methods: {
-    ...mapActions(["handleAddTodo", "getLocalStroge"]),
+    ...mapActions(["handleAddTodo", "getLocalStroge", "deleteTodoById"]),
     handileSubmit(val) {
       this.handleAddTodo(val);
+    },
+    handleDelete(id) {
+      this.deleteTodoById(id);
     }
   },
   computed: {

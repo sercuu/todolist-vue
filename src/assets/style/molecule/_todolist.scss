@@ -69,6 +69,7 @@
     margin: 40px 0;
 
     &__item {
+      position: relative;
       box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.05) !important;
       display: flex;
       flex-direction: column;
@@ -77,6 +78,33 @@
       border-radius: 6px;
       padding: 25px;
       margin-bottom: 25px;
+      &:hover {
+        .list__item__delete {
+          display: block;
+        }
+      }
+
+      &__delete {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        display: none;
+
+        button {
+          background: red;
+          border: none;
+          color: #fff;
+          border-radius: 100%;
+          &:hover,
+          &:focus {
+            outline: none;
+          }
+        }
+      }
     }
+  }
+  .empty {
+    text-align: center;
+    font-size: 35px;
   }
 }

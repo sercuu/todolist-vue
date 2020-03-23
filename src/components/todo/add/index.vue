@@ -13,7 +13,6 @@
         <label>End Date</label>
         <Datepicker :value="endDate" name="endDate" v-model="endDate" />
       </div>
-
       <div class="addTodo__button">
         <button type="submit">ADD</button>
       </div>

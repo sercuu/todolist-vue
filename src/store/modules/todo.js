@@ -21,6 +21,13 @@ const actions = {
             localStorage.setItem('todolist', JSON.stringify(newTodo));   
             commit('setTodoList', newTodo)            
         }   
+    },
+    deleteTodoById({ commit}, id) {
+        console.log(id, 'actionID')
+        const todolist = JSON.parse(localStorage.getItem('todolist'))
+        const newTodolist = todolist.filter(item => item.id != id)
+        localStorage.setItem('todolist', JSON.stringify(newTodolist));   
+        commit('setTodoList', newTodolist)            
     }
 }
 
