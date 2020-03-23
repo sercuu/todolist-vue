@@ -45,6 +45,7 @@ export default {
         startDate: this.startDate,
         endDate: this.endDate
       };
+      console.log(todo);
       this.handileSubmit(todo);
     }
   }
