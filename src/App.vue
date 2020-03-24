@@ -7,19 +7,27 @@
 </template>
 
 <script>
-import DefaultLayout from "./layouts/default";
-
+import { mapGetters, mapActions } from 'vuex';
+import DefaultLayout from './layouts/default';
+import AuthLayout from './layouts/auth';
 export default {
-  name: "app",
-
-  data() {
-    return {
-      layout: DefaultLayout
-    };
+  name: 'app',
+  computed: {
+    ...mapGetters(['layout'])
+  },
+  components: {
+    'auth-layout': AuthLayout,
+    'default-layout': DefaultLayout
+  },
+  methods: {
+    ...mapActions(['checkLayout'])
+  },
+  mounted() {
+    this.checkLayout();
   }
 };
 </script>
 
 <style land="sass" scoped>
-@import "./assets/style/app.scss";
+@import './assets/style/app.scss';
 </style>
