@@ -12,7 +12,7 @@ const getters = {
 const actions = {
     checkLayout({ commit }) {
         const auth = localStorage.getItem('token');
-        console.log(auth,'checkauth');
+
 
         if (auth) {
              // Servis baglanim 200 donerse true & hata alirsa false yollanicak
@@ -25,7 +25,7 @@ const actions = {
 
     },
     login({ commit }, user) {
-        console.log(user, 'action');
+
         localStorage.setItem('token', JSON.stringify(user));
         // Servis baglanim 200 donerse true & hata alirsa false yollanicak
 

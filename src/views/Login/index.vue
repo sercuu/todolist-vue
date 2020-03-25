@@ -2,33 +2,28 @@
   <div class="login">
     <form @submit="handleSubmit">
       <input type="text" name="mail" v-model="mail" autocomplete="off" />
-      <input
-        type="password"
-        name="password"
-        v-model="pass"
-        autocomplete="off"
-      />
+      <input type="password" name="password" v-model="pass" autocomplete="off" />
       <button type="submit">Giris</button>
     </form>
   </div>
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex';
+import { mapActions, mapGetters } from "vuex";
 
 export default {
-  name: 'Login',
+  name: "Login",
   data: () => {
     return {
-      mail: '',
-      pass: ''
+      mail: "",
+      pass: ""
     };
   },
   computed: {
-    ...mapGetters(['isAuth'])
+    ...mapGetters(["isAuth"])
   },
   methods: {
-    ...mapActions(['login']),
+    ...mapActions(["login"]),
     handleSubmit(e) {
       e.preventDefault();
       const userInfo = {
@@ -36,7 +31,7 @@ export default {
         pass: this.pass
       };
       this.login(userInfo);
-      this.$router.push('/');
+      this.$router.push("/");
     }
   }
 };

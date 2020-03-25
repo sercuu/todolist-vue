@@ -17,13 +17,16 @@
 </template>
 
 <script>
-import moment from "moment";
+import moment from 'moment';
 export default {
-  name: "toDoList",
-  props: ["Lists", "handleDelete"],
+  name: 'toDoList',
+  props: {
+    Lists: Array,
+    handleDelete: Function
+  },
   methods: {
     moment: function(e) {
-      return moment(e).format("DD.MM.YYYY");
+      return moment(e).format('DD.MM.YYYY');
     }
   }
 };

@@ -2,6 +2,7 @@
   <div class="auth">
     <!-- <Login /> -->
     <slot />
+    <div class="auth__gradient"></div>
   </div>
 </template>
 
@@ -9,7 +10,7 @@
 // import Login from "../../views/Login";
 
 export default {
-  name: 'authLayout'
+  name: "authLayout"
   //   components: { Login }
 };
 </script>

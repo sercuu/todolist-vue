@@ -3,7 +3,12 @@
     <form @submit="onSubmit">
       <div class="addTodo__input">
         <label>Title</label>
-        <input type="text" name="addtodo" v-model="todoVal" autocomplete="off" />
+        <input
+          type="text"
+          name="addtodo"
+          v-model="todoVal"
+          autocomplete="off"
+        />
       </div>
       <div>
         <label>Start Date</label>
@@ -21,16 +26,18 @@
 </template>
 
 <script>
-import Datepicker from "vuejs-datepicker";
-import uid from "uid";
+import Datepicker from 'vuejs-datepicker';
+import uid from 'uid';
 
 export default {
-  name: "addTodo",
-  props: ["handileSubmit"],
+  name: 'addTodo',
+  props: {
+    handileSubmit: Function
+  },
   components: { Datepicker },
   data() {
     return {
-      todoVal: "",
+      todoVal: '',
       startDate: new Date(),
       endDate: new Date()
     };

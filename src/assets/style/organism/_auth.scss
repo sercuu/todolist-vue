@@ -1,0 +1,16 @@
+.auth {
+  &__gradient {
+    position: absolute;
+    top: 0;
+    width: 65vw;
+    height: 100vh;
+    left: -15vw;
+    background: linear-gradient(
+      122deg,
+      rgba(70, 66, 251, 1) 0%,
+      rgba(66, 130, 251, 1) 50%,
+      rgba(66, 174, 251, 1) 100%
+    );
+    transform: skew(-10deg);
+  }
+}

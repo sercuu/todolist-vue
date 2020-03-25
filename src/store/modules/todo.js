@@ -23,7 +23,6 @@ const actions = {
         }   
     },
     deleteTodoById({ commit}, id) {
-        console.log(id, 'actionID')
         const todolist = JSON.parse(localStorage.getItem('todolist'))
         const newTodolist = todolist.filter(item => item.id != id)
         localStorage.setItem('todolist', JSON.stringify(newTodolist));   

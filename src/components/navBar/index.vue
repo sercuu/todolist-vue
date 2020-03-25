@@ -1,24 +1,30 @@
 <template>
   <nav class="nav">
-    <router-link v-for="route in router" :to="route.path" :key="route.name">{{
-      route.name
-    }}</router-link>
-    <!-- <router-view /> -->
-    <button @click="logout" type="button">logout</button>
+    <div>
+      <router-link v-for="route in router" :to="route.path" :key="route.name">
+        {{
+        route.name
+        }}
+      </router-link>
+      <!-- <router-view /> -->
+    </div>
+    <div class="logout">
+      <button @click="logout" type="button">Logout</button>
+    </div>
   </nav>
 </template>
 
 <script>
-import { mapActions } from 'vuex';
-import routerModel from '../../routerModel';
+import { mapActions } from "vuex";
+import routerModel from "../../routerModel";
 
 export default {
-  name: 'navbar',
+  name: "navbar",
   methods: {
-    ...mapActions(['logOut']),
+    ...mapActions(["logOut"]),
     logout() {
       this.logOut();
-      this.$router.push('/login');
+      this.$router.push("/login");
     }
   },
   data: function() {
