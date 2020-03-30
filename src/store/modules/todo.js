@@ -16,7 +16,7 @@ const actions = {
             const newTodoList = [todo, ...todolist];
             localStorage.setItem('todolist', JSON.stringify(newTodoList));
             commit('setTodoList', newTodoList)
-        } else {
+        } else { 
             const newTodo = [todo]
             localStorage.setItem('todolist', JSON.stringify(newTodo));   
             commit('setTodoList', newTodo)            
@@ -26,7 +26,8 @@ const actions = {
         const todolist = JSON.parse(localStorage.getItem('todolist'))
         const newTodolist = todolist.filter(item => item.id != id)
         localStorage.setItem('todolist', JSON.stringify(newTodolist));   
-        commit('setTodoList', newTodolist)            
+        commit('setTodoList', newTodolist) 
+        
     }
 }
 
