@@ -7,7 +7,9 @@
 
           <AddTodo :handileSubmit="handileSubmit" />
           <TodoList :Lists="todolist" :handleDelete="handleDelete" />
-          <div class="empty" v-if="todolist && todolist.length === 0">YAPILCAK IS YOK &#127829;</div>
+          <div class="empty" v-if="todolist && todolist.length === 0">
+            YAPILCAK IS YOK &#127829;
+          </div>
         </div>
       </div>
     </div>
@@ -29,6 +31,12 @@ export default {
     },
     handleDelete(id) {
       this.deleteTodoById(id);
+    },
+    getLocalStrogeTodo() {
+      const localTodolist = localStorage.getLocalStroge("todolist");
+      if (!localTodolist) {
+        localStorage.setItem("todolist", JSON.stringify([]));
+      }
     }
   },
   computed: {
@@ -38,7 +46,7 @@ export default {
     this.getLocalStroge();
   },
   mounted() {
-    localStorage.setItem("todolist", JSON.stringify([]));
+    this.getLocalStrogeTodo();
   }
 };
 </script>
